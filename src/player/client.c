@@ -1,11 +1,6 @@
 #include "g_local.h"
 #include "monster/m_player.h"
 
-//Multithreading needs windows.h
-#if defined(_WIN32) || defined(WIN32)
-#include <windows.h>
-#endif
-
 int		cumsindex;
 
 //Function prototypes required for this .c file:
@@ -1342,7 +1337,7 @@ edict_t *SelectRandomDeathmatchSpawnPoint (edict_t *ent)
 	else
 		count -= 2;
 
-	selection = rand() % count;
+	selection = count ? rand() % count : 0;
 
 	spot = NULL;
 	do

@@ -1,11 +1,14 @@
 #include "g_local.h"
 #include "monster/m_player.h"
+#include "ai/ai_local.h"
 
 //Function prototypes required for this .c file:
 void Grenade_Explode (edict_t *ent);
 void Cmd_CorpseExplode(edict_t *ent);
 void Cmd_HellSpawn_f (edict_t *ent);
 void Cmd_Caltrops_f (edict_t *ent);
+void SP_target_speaker(edict_t* ent);
+qboolean ToggleSecondary(edict_t* ent, gitem_t* item, qboolean printmsg);
 //End prototypes
 
 void Cmd_DetPipes_f (edict_t *ent)
@@ -137,7 +140,8 @@ void Cmd_Lockon_f (edict_t *ent, int toggle)
 	}
 }
 
-void cmd_Sentry (edict_t *ent);
+//QW//void cmd_Sentry (edict_t *ent);
+
 void Cmd_Thrust_f (edict_t *ent)
 {
     char    *string;
@@ -181,7 +185,7 @@ void FL_think (edict_t *self)
 
 		// special circumstance for flipped sentry
 		if (self->owner->owner && self->owner->owner->style == SENTRY_FLIPPED)
-			start[2] -= abs(self->owner->mins[2]);
+			start[2] -= fabsf(self->owner->mins[2]);
 		else
 			start[2] += self->owner->maxs[2];
 		VectorMA(start, (self->owner->maxs[0] + 16), forward, start);
@@ -264,14 +268,14 @@ char *ClientTeam (edict_t *ent)
 
 int NotHostile (edict_t *ent1, edict_t *ent2)
 {
+	// sanity check
+	if (!ent1 || !ent2)
+		return 0;
+
 	edict_t *e1 = G_GetClient(ent1);
 	edict_t *e2 = G_GetClient(ent2);
 
 	if (ctf->value || ptr->value || domination->value || invasion->value)
-		return 0;
-
-	// sanity check
-	if (!ent1 || !ent2)
 		return 0;
 
 	// both entities are players or owned by players
@@ -691,7 +695,7 @@ void Cmd_Togglesecondary_f (edict_t *ent)
 	if (PM_PlayerHasMonster(ent))
 	{
 		// player-tank has a 3rd attack if morph mastery is trained
-		if ((ent->owner->mtype == P_TANK) 
+		if ((ent->owner) && (ent->owner->mtype == P_TANK)
 			&& (ent->myskills.abilities[MORPH_MASTERY].current_level > 0))
 		{
 			if (ent->client->weapon_mode==3)
@@ -1227,7 +1231,6 @@ Cmd_Inven_f
 */
 void Cmd_Inven_f (edict_t *ent)
 {
-	int			i;
 	gclient_t	*cl;
 	if(ent->svflags & SVF_MONSTER) return;
 
@@ -2410,10 +2413,56 @@ void Cmd_MapSize_f (edict_t *ent)
 }
 */
 
+void AdminModeChange(edict_t* ent, char* mode)
+{
+	int newmode = 0;
+
+	for (int i = 0; i < strlen(mode); i++)
+		mode[i] = tolower(mode[i]);
+
+	if (!Q_stricmp(mode, "pvp"))
+		newmode = MAPMODE_PVP;
+	else if (!Q_stricmp(mode, "pvm"))
+		newmode = MAPMODE_PVM;
+	else if (!Q_stricmp(mode, "dom"))
+		newmode = MAPMODE_DOM;
+	else if (!Q_stricmp(mode, "ctf"))
+		newmode = MAPMODE_CTF;
+	else if (!Q_stricmp(mode, "ffa"))
+		newmode = MAPMODE_FFA;
+	else if (!Q_stricmp(mode, "inv"))
+		newmode = MAPMODE_INV;
+	else if (!Q_stricmp(mode, "inh"))
+		newmode = MAPMODE_INH;
+	else if (!Q_stricmp(mode, "tra"))
+		newmode = MAPMODE_TRA;
+	else if (!Q_stricmp(mode, "vhw"))
+		newmode = MAPMODE_VHW;
+	else if (!Q_stricmp(mode, "tbi"))
+		newmode = MAPMODE_TBI;
+	else
+	{
+		safe_cprintf(ent, PRINT_CHAT, "Invalid mode command.\n");
+		return;
+	}
+
+	safe_bprintf(PRINT_HIGH, "Admin has changed the game mode to %s!\n", mode);
+
+	// Point to the correct map list
+	v_maplist_t* maplist = GetMapList(newmode);
+
+	// Set up the mode cvars by using the voting function.
+	V_ChangeMap(maplist, 0, newmode); // default to first map in the new mode.
+	ExitLevel();
+}
+
 void Cmd_AdminCmd (edict_t *ent)
 {
 	edict_t *player;
-	char *cmd1, *cmd2, *cmd3, *message;
+	char* cmd1;
+	char* cmd2;
+	char* cmd3;
+	char* message;
 	int num = 0;
 
 	if (!ent->myskills.administrator)
@@ -2421,6 +2470,7 @@ void Cmd_AdminCmd (edict_t *ent)
 		safe_cprintf(ent, PRINT_HIGH, "Access denied. You must be an administrator to issue commands.\n");
 		return;
 	}
+	
 	cmd1 = gi.argv(1);
 	cmd2 = gi.argv(2);
 	cmd3 = gi.argv(3);
@@ -2441,13 +2491,19 @@ void Cmd_AdminCmd (edict_t *ent)
 
 	}
 
-	if (!Q_stricmp(cmd1, "crashserv"))
-	{
-		char *segf = 0;
-		*segf = 1; // Boom.
-	}
+	else if (Q_stricmp(cmd1, "modechange") == 0)
+		AdminModeChange(ent, cmd2);
 
-	if (!Q_stricmp(cmd1, "bot"))
+	//QW// Deleted this. 
+	// Who the hell puts a crash command in their server code?
+	// That's what rcon quit is for.
+	//else if (!Q_stricmp(cmd1, "crashserv"))
+	//{
+	//	char *segf = 0;
+	//	*segf = 1; // Boom.
+	//}
+
+	else if (!Q_stricmp(cmd1, "bot"))
 	{
 		if( !Q_stricmp (cmd2, "addbot") )
 		{ 
@@ -2479,7 +2535,7 @@ void Cmd_AdminCmd (edict_t *ent)
 			return;
 	}
 
-	if (!Q_stricmp(cmd1, "debugsound"))
+	else if (!Q_stricmp(cmd1, "debugsound"))
 	{
 		edict_t *speaker;
 		speaker = G_Spawn();
@@ -2509,6 +2565,7 @@ void Cmd_AdminCmd (edict_t *ent)
 		else
 			safe_cprintf(ent, PRINT_HIGH, "No match for %s was found.\n", cmd2);
 	}*/
+
 	else if (Q_stricmp(cmd1, "boss") == 0)
 
 	{
@@ -2525,6 +2582,7 @@ void Cmd_AdminCmd (edict_t *ent)
 		else
 			safe_cprintf(ent, PRINT_HIGH, "No match for %s was found.\n", cmd2);
 	}
+	
 	else if (Q_stricmp(cmd1, "addexp") == 0 && ent->myskills.administrator > 9)
 	{
 		safe_cprintf(ent, PRINT_HIGH, "Adding exp for %s...\n", cmd2);
@@ -2543,10 +2601,11 @@ void Cmd_AdminCmd (edict_t *ent)
 		else
 			safe_cprintf(ent, PRINT_HIGH, "No match for %s was found.\n", cmd2);
 	}
+	
 	else if (Q_stricmp(cmd1, "srune") == 0)
 	{
 		int index = atoi(cmd3);
-		int type;
+		int type = ITEM_NONE;
 
 		if (ent->myskills.administrator < 10)
 			return;
@@ -2565,6 +2624,7 @@ void Cmd_AdminCmd (edict_t *ent)
 		if (index < 0)	adminSpawnRune(ent, type, 0);
 			else adminSpawnRune(ent, type, index);
 	}
+	
 	else if (Q_stricmp(cmd1, "incinv") == 0)
 	{
 		invasion_difficulty_level++;
@@ -2593,6 +2653,7 @@ void Cmd_AdminCmd (edict_t *ent)
 			}
 		}
 	}
+	
 	else if (Q_stricmp(cmd1, "admin") == 0 && ent->myskills.administrator > 9)
 	{
 		if ((player = FindPlayerByName(cmd2)) != NULL)
@@ -2609,6 +2670,7 @@ void Cmd_AdminCmd (edict_t *ent)
 			}
 		}
 	}
+	
 	else if (Q_stricmp(cmd1, "setflag") == 0 && ent->myskills.administrator > 9)
 	{
 		CTF_WriteFlagPosition(ent);
@@ -2681,11 +2743,11 @@ void Cmd_GetFloorPos_f (edict_t *ent, int add)
 
 	
 void Cmd_BombPlayer(edict_t *ent, float skill_mult, float cost_mult);
-Cmd_Thorns(edict_t *ent);
+//void Cmd_Thorns(edict_t *ent);
 //void Cmd_HolyShock(edict_t *ent);
-int ClassNum(edict_t *ent, int team);
-void Cmd_VampireMode (edict_t *ent);
-qboolean vrx_CheckForFlag (void);
+//int ClassNum(edict_t *ent, int team);
+//void Cmd_VampireMode (edict_t *ent);
+//qboolean vrx_CheckForFlag (void);
 /*
 =================
 ClientCommand

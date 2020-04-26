@@ -100,9 +100,7 @@ void cocoon_cloak (edict_t *self)
 		return;
 
 	// don't cloak if we're holding the flag carrier!
-	if (self->enemy->client && (self->enemy->client->pers.inventory[flag_index] || 
-		self->enemy->client->pers.inventory[flag_index] || 
-		self->enemy->client->pers.inventory[flag_index]))
+	if (self->enemy->client && (self->enemy->client->pers.inventory[flag_index]))
 		return;
 
 	// already cloaked
@@ -201,7 +199,7 @@ void cocoon_attack (edict_t *self)
 	
 	// move position
 	VectorCopy(self->s.origin, start);
-	start[2] += fabs(self->enemy->mins[2]) + 1;
+	start[2] += fabsf(self->enemy->mins[2]) + 1;
 	VectorCopy(start, self->enemy->s.origin);
 	gi.linkentity(self->enemy);
 	

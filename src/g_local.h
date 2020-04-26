@@ -7,6 +7,17 @@
 //Using this , especially on higher levels, is very lag prone and may cause server overflow.
 //#define PRINT_DEBUGINFO 1
 
+#ifdef _WIN32
+#define WIN32_LEAN_AND_MEAN	//non-MFC
+#include <windows.h>
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+_CrtMemState startup1;	// memory diagnostics
+#else
+#define OutputDebugString	//not doing Windows
+#endif
+
 #include "q_shared.h"
 // define GAME_INCLUDE so that game.h does not define the
 // short, server-visible gclient_t and edict_t structures,
@@ -75,8 +86,8 @@ extern long FLAG_FRAMES;
 //==================================================================
 
 // view pitching times
-#define DAMAGE_TIME		0.5
-#define	FALL_TIME		0.3
+#define DAMAGE_TIME		0.5f
+#define	FALL_TIME		0.3f
 
 
 // edict->spawnflags
@@ -112,7 +123,7 @@ extern long FLAG_FRAMES;
 #define FL_RESPAWN				0x80000000	// used for item respawning
 
 
-#define	FRAMETIME		0.1
+#define	FRAMETIME		0.1f
 
 // memory tags to allow dynamic memory to be cleaned up
 #define	TAG_GAME	765		// clear when unloading the dll
@@ -309,7 +320,7 @@ typedef struct
 #define WEAP_BFG				11
 #define WEAP_PHALANX			12
 
-#define WEAP_TOTAL				12
+#define WEAP_TOTAL				25	// size of the AIWeapons array
 
 #define WEAP_BOOMER				13
 
@@ -381,7 +392,7 @@ typedef struct
 	char		spawnpoint[512];	// needed for coop respawns
 
 	// store latched cvars here that we want to get at often
-	int			maxclients;
+	int			maxclients;	// number of allowed clients
 	int			maxentities;
 
 	// cross level triggers
@@ -777,15 +788,17 @@ int	skullindex;
 extern	int	meansOfDeath;
 
 
-extern	edict_t			*g_edicts;
+#define q_offsetof(t, m)    ((size_t)&((t *)0)->m)
 
-#define	FOFS(x) (int)&(((edict_t *)0)->x)
-#define	STOFS(x) (int)&(((spawn_temp_t *)0)->x)
-#define	LLOFS(x) (int)&(((level_locals_t *)0)->x)
-#define	CLOFS(x) (int)&(((gclient_t *)0)->x)
+extern	edict_t* g_edicts;
+
+#define FOFS(x)     q_offsetof(edict_t, x)
+#define STOFS(x)    q_offsetof(spawn_temp_t, x)
+#define	LLOFS(x) (size_t)&(((level_locals_t *)0)->x)
+#define	CLOFS(x) (size_t)&(((gclient_t *)0)->x)
 
 #define random()	((rand () & 0x7fff) / ((float)0x7fff))
-#define crandom()	(2.0 * (random() - 0.5))
+#define crandom()	(2.0f * (random() - 0.5f))
 
 extern	cvar_t	*maxentities;
 extern	cvar_t	*deathmatch;
@@ -855,7 +868,6 @@ extern cvar_t *vrx_over10mult;
 extern cvar_t *vrx_pvpcreditmult;
 extern cvar_t *vrx_pvmcreditmult;
 
-extern cvar_t *sv_maplist;
 extern cvar_t *flood_msgs;
 extern cvar_t *flood_persecond;
 extern cvar_t *flood_waitdelay;
@@ -1129,6 +1141,12 @@ void Weapon_Trap (edict_t *ent);
 
 //K03 Begin
 void Weapon_Sword (edict_t *ent);
+
+// teleport.c
+qboolean ValidTeleportSpot(edict_t* ent, vec3_t spot);
+
+qboolean SavePlayer(edict_t* ent);
+
 
 //
 // g_combat.c
@@ -2075,7 +2093,8 @@ void Pick_respawnweapon(edict_t *ent);
 #define for_each_player(JOE_BLOGGS,INDEX)				\
 for(INDEX=1;INDEX<=maxclients->value;INDEX++)			\
 	if ((JOE_BLOGGS=&g_edicts[i]) && JOE_BLOGGS->inuse && JOE_BLOGGS->client)
-int total_players();
+
+int total_players(void);
 void Cmd_CreateBreather_f(edict_t *ent);
 void Cmd_CreateEnviro_f(edict_t *ent);
 void Cmd_CreateInvin_f(edict_t *ent);
@@ -2268,7 +2287,7 @@ qboolean G_Spawn_Monster2(edict_t *ent, vec3_t torigin, int mtype, float secs);
 #define VectorEmpty(a)        ((a[0]==0)&&(a[1]==0)&&(a[2]==0))
 #define SENTRY_UPRIGHT		1
 #define SENTRY_FLIPPED		2
-void	ReadBotChat(void);
+void ReadBotChat(void);
 void BotGreeting(edict_t *chat);
 void BotComeback(edict_t *self);
 void BotInsultStart(edict_t *self);
@@ -2290,6 +2309,9 @@ qboolean BossExists (void);
 int numNearbyEntities (edict_t *ent, float dist, qboolean vis);
 void RemoveLasers (edict_t *ent);
 int V_AddFinalExp (edict_t *player, int exp);
+
+/* fireball.c */
+void fire_fireball(edict_t* self, vec3_t start, vec3_t aimdir, int damage, float damage_radius, int speed, int flames, int flame_damage);
 
 #define WEAPON_RUNE			1
 #define ABILITY_RUNE		2

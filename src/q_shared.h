@@ -5,15 +5,32 @@
 #define Q_SHARED
 
 #ifdef _WIN32
-// unknown pragmas are SUPPOSED to be ignored, but....
-#pragma warning(disable : 4244)     // MIPS
-#pragma warning(disable : 4136)     // X86
-#pragma warning(disable : 4051)     // ALPHA
-
-#pragma warning(disable : 4018)     // signed/unsigned mismatch
-#pragma warning(disable : 4305)		// truncation from const double to float
-
+#define NO_GDS	1
 #endif
+
+#ifdef _WIN32
+#pragma warning(disable : 4244)		// conversion from 'type1' to 'type2', possible loss of data
+#pragma warning(disable : 4100)		// unreferenced formal parameter
+#pragma warning(disable : 4127)		// conditional expression is constant
+#pragma warning(disable : 4305)		// truncation from const double to float
+#pragma warning(disable : 4018)		// signed/unsigned mismatch
+#if _MSC_VER > 1500
+#pragma warning(disable : 4706)		// Assignment within conditional expression
+#pragma warning(disable : 4996)		// unsafe CRT functions (_CRT_SECURE_NO_WARNINGS).
+#pragma warning(disable : 4459)		// declaration of 'var' hides global declaration.
+#pragma warning(disable : 6244)		// local declaration of <variable> hides previous declaration at <line> of <file>
+#endif
+#endif
+
+//#ifdef _WIN32
+//// unknown pragmas are SUPPOSED to be ignored, but....
+//#pragma warning(disable : 4244)     // MIPS
+//#pragma warning(disable : 4136)     // X86
+//#pragma warning(disable : 4051)     // ALPHA
+//
+//#pragma warning(disable : 4018)     // signed/unsigned mismatch
+//
+//#endif
 
 //K03 Begin
 #ifndef __cplusplus
@@ -24,7 +41,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-
+#include <ctype.h>
 #endif
 //K03 End
 
@@ -137,9 +154,6 @@ extern vec3_t vec3_origin;
 
 #define	IS_NAN(x) (((*(int *)&x)&nanmask)==nanmask)
 
-// microsoft's fabs seems to be ungodly slow...
-//float Q_fabs (float f);
-//#define	fabs(f) Q_fabs(f)
 #if !defined C_ONLY
 extern long Q_ftol( float f );
 #else
@@ -221,8 +235,8 @@ void Com_PageInMemory (byte *buffer, int size);
 
 // portable case insensitive compare
 int Q_stricmp (char *s1, char *s2);
-int Q_strcasecmp (char *s1, char *s2);
-int Q_strncasecmp (char *s1, char *s2, int n);
+int Q_strcasecmp (const char *s1, const char *s2);
+int Q_strncasecmp (const char *s1, const char *s2, int n);
 
 //=============================================
 
@@ -234,7 +248,7 @@ float	BigFloat (float l);
 float	LittleFloat (float l);
 
 void	Swap_Init (void);
-char	*va(char *format, ...);
+char	*va(const char *format, ...);
 
 //=============================================
 

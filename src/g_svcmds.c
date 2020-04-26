@@ -1,10 +1,6 @@
 #include "g_local.h"
 #include <sys/stat.h>
 
-//#if defined(_WIN32) || defined(WIN32)
-//#include <windows.h>
-//#endif
-
 //Function prototypes required for this .c file:
 void dom_spawnflag (void);
 void boss_spawn_tank (edict_t *ent);
@@ -675,18 +671,18 @@ void SVCmd_DeleteCharacter_f()
 	sprintf(buf, "%s\\%s.vrx", save_path->string, pname);
 	if(!stat(buf, &file) && (file.st_size > 1))
 	{
-
-		
 		WriteToLogFile(pname, va("Character deleted by an administrator (Reason: %s).\n", reason));
 		gi.bprintf(PRINT_HIGH, "%s's character was deleted by an administrator (reason: %s)\n", pname, reason);
 		sprintf(buf, "del %s\\\"%s.vrx\"", save_path->string, V_FormatFileName(pname));
-		system(buf);
+		int status = system(buf);
+		if (status == 0)
+			gi.dprintf("Character file deleted successfully.\n");
 	}
 }
 
 void SVCmd_ListCombatPrefs ()
 {
-	int i, num=0;
+	int i;
 	edict_t *player;
 
 	for (i = 1; i <= game.maxclients; i++)
@@ -744,7 +740,8 @@ void SV_AddMapToMaplist()
 
 	DoMaplistFilename(mode, &filename[0]);
 
-	if (!(fp = fopen(filename, "a")))
+	fp = fopen(filename, "a");
+	if (!fp)
 	{
 		safe_cprintf(NULL, PRINT_HIGH, "%s: file couldn't be opened... opening in write mode.\n", filename);
 		fp = fopen(filename, "w");
@@ -860,4 +857,3 @@ else if (Q_stricmp (cmd, "saveplayers") == 0)
 	else
 		safe_cprintf (NULL, PRINT_HIGH, "Unknown server command \"%s\"\n", cmd);
 }
-

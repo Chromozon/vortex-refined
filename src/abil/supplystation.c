@@ -49,7 +49,7 @@ float ArmorLevel (edict_t *ent) {
 
 edict_t *DropRandomAmmo (edict_t *self)
 {
-	gitem_t *item;
+	gitem_t *item = NULL;
 
 	switch (GetRandom(1, 6))
 	{
@@ -407,7 +407,7 @@ void supplystation_pain (edict_t *self, edict_t *other, float kick, int damage)
 		if (other->client)
 			gi.centerprintf(self->creator, "%s is attacking\nyour station!\n", other->client->pers.netname);
 		else
-			gi.centerprintf(self->creator, "Your station is under\nattack!", other->client->pers.netname);
+			gi.centerprintf(self->creator, "Your station is under\nattack!");
 		self->random = level.time + 5;
 	}
 }
@@ -448,7 +448,7 @@ void BuildSupplyStation (edict_t *ent, int cost, float skill_mult, float delay_m
 	ValidateAngles(angles);
 	// player is aiming at the ground
 	if ((tr.fraction != 1.0) && (tr.endpos[2] < ent->s.origin[2]) && (angles[PITCH] == 270))
-		end[2] += abs(station->mins[2])+1;
+		end[2] += fabsf(station->mins[2])+1;
 	// make sure station doesn't spawn in a solid
 	tr = gi.trace(end, station->mins, station->maxs, end, NULL, MASK_SHOT);
 	if (tr.contents & MASK_SHOT)

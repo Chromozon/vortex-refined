@@ -969,7 +969,7 @@ float V_EntDistance(edict_t *ent1, edict_t *ent2)
 	dist[1] = ent1->s.origin[1] - ent2->s.origin[1];
 	dist[2] = ent1->s.origin[2] - ent2->s.origin[2];
 
-    return sqrt((dist[0] * dist[0]) + (dist[1] * dist[1]) + (dist[2] * dist[2]));
+    return sqrtf((dist[0] * dist[0]) + (dist[1] * dist[1]) + (dist[2] * dist[2]));
 }
 
 //************************************************************************************************
@@ -1238,7 +1238,7 @@ edict_t *V_getClientByNumber(int index)
 char ReadChar(FILE *fptr)
 {
 	char Value;
-	fread(&Value, sizeof(char), 1, fptr);
+	size_t count = fread(&Value, sizeof(char), 1, fptr);
 	return Value;
 }
 
@@ -1265,7 +1265,7 @@ void ReadString(char *buf, FILE *fptr)
 		//return buf;
 	}
 
-	fread(buf, Length, 1, fptr);
+	size_t count = fread(buf, Length, 1, fptr);
 
 	//Null terminate the string just read
 	buf[Length] = 0;
@@ -1285,7 +1285,7 @@ void WriteString(FILE *fptr, char *String)
 int ReadInteger(FILE *fptr)
 {
 	int Value;
-	fread(&Value, sizeof(int), 1, fptr);
+	size_t count = fread(&Value, sizeof(int), 1, fptr);
 	return Value;
 }
 
@@ -1301,7 +1301,7 @@ void WriteInteger(FILE *fptr, int Value)
 long ReadLong(FILE *fptr)
 {
 	long Value;
-	fread(&Value, sizeof(long), 1, fptr);
+	size_t count = fread(&Value, sizeof(long), 1, fptr);
 	return Value;
 }
 
@@ -1316,8 +1316,8 @@ void WriteLong(FILE *fptr, long Value)
 
 char *V_FormatFileName(char *name)
 {
-	char filename[64];
-	char buffer[64];
+	char filename[MAX_QPATH];
+	char buffer[MAX_QPATH];
 	int i, j = 0;
 
 	//This bit of code formats invalid filename chars, like the '?' and 

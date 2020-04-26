@@ -97,7 +97,7 @@ static void AStar_InitLists (void)
 	memset( alist, -1, sizeof(alist));//jabot092
 }
 
-static int AStar_PLinkDistance( n1, n2 )
+static int AStar_PLinkDistance( int n1, int n2 )
 {
 	int	i;
 
@@ -122,7 +122,7 @@ static int	Astar_HDist_ManhatanGuess( int node )
 
 	for (i=0 ; i<3 ; i++)
 	{
-		DistVec[i] = fabs(nodes[goalNode].origin[i] - nodes[node].origin[i]);
+		DistVec[i] = fabsf(nodes[goalNode].origin[i] - nodes[node].origin[i]);
 	}
 
 	HDist = (int)(DistVec[0] + DistVec[1] + DistVec[2]);
@@ -139,7 +139,7 @@ static void AStar_PutInClosed( int node )
 	astarnodes[node].list = CLOSEDLIST;
 }
 
-static void AStar_PutAdjacentsInOpen( node )
+static void AStar_PutAdjacentsInOpen( int node )
 {
 	int	i;
 

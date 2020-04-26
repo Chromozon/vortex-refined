@@ -234,7 +234,7 @@ void GetScorePosition ()
 { 
      int i, j, k; 
      int sorted[MAX_CLIENTS]; 
-     int sortedscores[MAX_CLIENTS]; 
+	 int sortedscores[MAX_CLIENTS] = { 0 };
      int score, total, last_score, last_pos=1; 
      gclient_t *cl; 
      edict_t *cl_ent; 
@@ -277,9 +277,9 @@ void GetScorePosition ()
      } 
 } 
 
-int GetRandom(int min,int max)
-{	
-	return (rand() % (max+1-min)+min);
+int GetRandom(int min, int max)
+{
+	return (rand() % (max + 1 - min) + min);
 }
 
 qboolean findspawnpoint (edict_t *ent)
@@ -408,7 +408,7 @@ qboolean TeleportNearArea (edict_t *ent, vec3_t point, int area_size, qboolean a
 	for (i=0; i<50000; i++) {
 		for (j=0; j<3; j++) {
 			VectorCopy(point, start);
-			start[j] += rand() % (area_size + 1) - 0.5*area_size;
+			start[j] += rand() % (area_size + 1) - area_size / 2;
 			if (gi.pointcontents(start) != 0)
 				continue;
 			if (!air)
@@ -858,11 +858,7 @@ void WriteToLogFile (char *char_name, char *s)
      sprintf(buf, "%s %s [%s]: %s", CURRENT_DATE, CURRENT_TIME, "Offline", s);  
   
      //determine path  
-     #if defined(_WIN32) || defined(WIN32)  
-          sprintf(path, "%s\\%s.log", save_path->string, V_FormatFileName(char_name));  
-     #else  
-          sprintf(path, "%s/%s.log", save_path->string, V_FormatFileName(char_name));  
-     #endif  
+     sprintf(path, "%s/%s.log", save_path->string, V_FormatFileName(char_name));  
   
      if ((fptr = fopen(path, "a")) != NULL) // append text to log  
      {  
@@ -870,7 +866,7 @@ void WriteToLogFile (char *char_name, char *s)
           if (buf[strlen(buf)-1] != '\n')  
                strcat(buf, "\n");  
   
-          fprintf(fptr, buf);  
+          fprintf(fptr, "%s", buf);  
           fclose(fptr);  
           return;  
      }  
@@ -891,11 +887,7 @@ void WriteToLogfile (edict_t *ent, char *s)
      sprintf(buf, "%s %s [%s]: %s", CURRENT_DATE, CURRENT_TIME, ip, s);  
   
      //determine path  
-     #if defined(_WIN32) || defined(WIN32)  
-          sprintf(path, "%s\\%s.log", save_path->string, V_FormatFileName(ent->client->pers.netname));  
-     #else  
-          sprintf(path, "%s/%s.log", save_path->string, V_FormatFileName(ent->client->pers.netname));  
-     #endif  
+     sprintf(path, "%s/%s.log", save_path->string, V_FormatFileName(ent->client->pers.netname));  
   
      if ((fptr = fopen(path, "a")) != NULL) // append text to log  
      {  
@@ -903,7 +895,7 @@ void WriteToLogfile (edict_t *ent, char *s)
           if (buf[strlen(buf)-1] != '\n')  
                strcat(buf, "\n");  
   
-          fprintf(fptr, buf);  
+          fprintf(fptr, "%s", buf);  
           fclose(fptr);  
           return;  
      }  
@@ -928,19 +920,15 @@ void WriteServerMsg (char *s, char *error_string, qboolean print_msg, qboolean s
 	 port = gi.cvar("port" , "0", CVAR_SERVERINFO);
 
      //determine path  
-     #if defined(_WIN32) || defined(WIN32)  
-          sprintf(path, "%s\\%d.log", game_path->string, (int)port->value);  
-     #else  
-          sprintf(path, "%s/%d.log", game_path->string, (int)port->value);  
-     #endif  
-
+     sprintf(path, "%s/%d.log", game_path->string, (int)port->value);  
+ 
      if ((fptr = fopen(path, "a")) != NULL) // append text to log  
      {  
           //3.0 make sure there is a line feed  
           if (buf[strlen(buf)-1] != '\n')  
                strcat(buf, "\n");  
   
-          fprintf(fptr, buf);  
+          fprintf(fptr, "%s", buf);  
           fclose(fptr);  
           return;  
      }  

@@ -201,7 +201,7 @@ void check_for_levelup (edict_t *ent)
 		if (points_needed > plateau_points || ent->myskills.level > 5 || ent->myskills.level > plateau_level)
 		{
 			// calculate next level points based
-			points_needed = plateau_points + 5000*(ent->myskills.level-plateau_level);
+			points_needed = plateau_points + 5000 * (ent->myskills.level-plateau_level);
 		}
 
 		ent->myskills.next_level += points_needed;
@@ -508,9 +508,9 @@ int PVP_AwardKill (edict_t *attacker, edict_t *targ, edict_t *target)
 	int			credits			= 0;
 	int			exp_points		= 0;
 	int			break_points	= 0;
-	float		level_diff		= 0;
-	float		bonus			= 1;
-	float		dmgmod			= 1;
+	float		level_diff		= 0.0f;
+	float		bonus			= 1.0f;
+	float		dmgmod			= 1.0f;
 	float		damage;
 	char		name[50];
 	int			minimum_points	= 1;
@@ -666,7 +666,8 @@ int PVP_AwardKill (edict_t *attacker, edict_t *targ, edict_t *target)
 	// min/max points awarded for a kill
 	/*if (exp_points > max_points)
 		exp_points = max_points;
-	else */if (exp_points < minimum_points)
+	else */
+	if (exp_points < minimum_points)
 		exp_points = minimum_points;
 
 	// award experience to allied players
