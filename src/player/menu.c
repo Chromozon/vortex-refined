@@ -9,6 +9,8 @@ void check_for_levelup(edict_t *ent);
 //Function prototypes required for this .c file:
 void GDS_LoadPlayer(edict_t *ent);
 void OpenDOMJoinMenu (edict_t *ent);
+int GetAbilityUpgradeCost(int index); // from upgrades.c
+qboolean SavePlayer(edict_t* ent);	// from v_file_IO.c
 
 void disableAbilities (edict_t *ent)
 {
@@ -769,20 +771,20 @@ void OpenJoinMenu (edict_t *ent)
 
 	//				    xxxxxxxxxxxxxxxxxxxxxxxxxxx (max length 27 chars)
 
-	addlinetomenu(ent, va("Vortex Indy v%s", VRX_VERSION), MENU_GREEN_CENTERED);
-	addlinetomenu(ent, " ", 0);
-	addlinetomenu(ent, "", 0);
-	addlinetomenu(ent, "Original design by Kombat03", 0);
-	addlinetomenu(ent, "", 0);
-	addlinetomenu(ent, "Programming by GHz, NewB,", 0);
-	addlinetomenu(ent, "Kombat03, Chamooze, doomie", 0);
-	addlinetomenu(ent, "", 0);
-	addlinetomenu(ent, "Maintained by ky0ko", 0);
-	addlinetomenu(ent, "with help from darkzard", 0);
-	addlinetomenu(ent, "", 0);
-	addlinetomenu(ent, "Start your reign", 1);
-	addlinetomenu(ent, "Toggle chasecam", 2);
-	addlinetomenu(ent, "Exit", 3);
+    addlinetomenu(ent, "Vortex Revival Project", MENU_GREEN_CENTERED);
+    addlinetomenu(ent, va("Vortex Indy v%s", VRX_VERSION), MENU_GREEN_CENTERED);
+    addlinetomenu(ent, "", 0);
+    addlinetomenu(ent, "Original design by Kombat03", 0);
+    addlinetomenu(ent, "", 0);
+    addlinetomenu(ent, "Programming by GHz, NewB,", 0);
+    addlinetomenu(ent, "Kombat03, Chamooze, doomie", 0);
+    addlinetomenu(ent, "", 0);
+    addlinetomenu(ent, "Maintained by Xcessive", 0);
+    addlinetomenu(ent, "q2vortex.com", MENU_GREEN_CENTERED);
+    addlinetomenu(ent, "", 0);
+    addlinetomenu(ent, "Start your reign", 1);
+    addlinetomenu(ent, "Toggle chasecam", 2);
+    addlinetomenu(ent, "Exit", 3);
 
 	setmenuhandler(ent, joinmenu_handler);
 	ent->client->menustorage.currentline = 12;

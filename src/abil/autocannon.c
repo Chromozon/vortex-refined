@@ -23,7 +23,7 @@
 #define AUTOCANNON_START_AMMO			5
 #define AUTOCANNON_INITIAL_AMMO			5
 #define AUTOCANNON_ADDON_AMMO			0
-#define AUTOCANNON_REPAIR_COST			0.1
+#define AUTOCANNON_REPAIR_COST			0.1f
 #define AUTOCANNON_TOUCH_DELAY			3.0
 
 void autocannon_remove (edict_t *self, char *message)
@@ -234,14 +234,15 @@ qboolean autocannon_checkstatus (edict_t *self)
 	if (!G_EntIsAlive(self->creator))
 		return false;
 
+	/*
 	// must be on firm ground
 	VectorCopy(self->s.origin, end);
 	end[2] -= abs(self->mins[2])+1;
 	tr = gi.trace(self->s.origin, self->mins, self->maxs, end, NULL, MASK_SOLID);
 	if (tr.fraction == 1.0)
-		return false;
+		return false;*/
 
-	return true; // everything is OK
+	 return true; // everything is OK
 }
 
 qboolean autocannon_effects (edict_t *self)
@@ -503,7 +504,7 @@ void CreateAutoCannon (edict_t *ent, int cost, float skill_mult, float delay_mul
 	{
 		// move up from ground
 		VectorCopy(tr.endpos, start);
-		start[2] += fabs(cannon->mins[2]) + 1;
+		start[2] += fabsf(cannon->mins[2]) + 1;
 	}
 
 	// make sure station doesn't spawn in a solid

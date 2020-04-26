@@ -433,6 +433,7 @@ void skull_remove (edict_t *self)
 	gi.unlinkentity(self);
 }
 
+/*
 void skull_return (edict_t *self)
 {
 	self->enemy = NULL;
@@ -454,7 +455,7 @@ void skull_return (edict_t *self)
 	// reset to idle state
 	self->style = 0;
 	self->monsterinfo.idle_frames++;
-}
+}*/
 
 void skull_think (edict_t *self)
 {
@@ -515,7 +516,7 @@ void skull_think (edict_t *self)
 			if (self->monsterinfo.search_frames > SKULL_SEARCH_TIMEOUT)
 			{
 				self->enemy = NULL;
-				skull_return(self);//skull_idle(self);
+				skull_idle(self);
 				self->nextthink = level.time + FRAMETIME;
 				return;
 			}
@@ -526,7 +527,7 @@ void skull_think (edict_t *self)
 		skull_attack(self);
 	}
 	else
-		skull_return(self);//skull_idle(self);
+		skull_idle(self);
 		
 	skull_runframes(self);
 	M_SetEffects(self);

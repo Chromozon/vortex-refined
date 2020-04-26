@@ -159,7 +159,7 @@ void ShowItemsHelpMenu(edict_t *ent)
 	addlinetomenu(ent, " ", 0);
 	addlinetomenu(ent, " To use: cmd use <item>", 0);
 	addlinetomenu(ent, " Some items are automatic.", 0);
-	addlinetomenu(ent, " Tballs can not be dropped.", 0);
+	addlinetomenu(ent, " Tballs cannot be dropped.", 0);
 
 	//Menu footer
 	addlinetomenu(ent, " ", 0);
@@ -274,7 +274,7 @@ void ShowBasicsMenu(edict_t *ent)
 	addlinetomenu(ent, " basics of Vortex, go", 0);
 	addlinetomenu(ent, " see our manual at", 0);
 	addlinetomenu(ent, " ", 0);
-	addlinetomenu(ent, " https://git.io/vdOos", MENU_GREEN_CENTERED);
+	addlinetomenu(ent, " q2vortex.com", MENU_GREEN_CENTERED);
 	addlinetomenu(ent, " ", 0);
 	addlinetomenu(ent, " There is too much info", 0);
 	addlinetomenu(ent, " to show in this menu.", 0);
