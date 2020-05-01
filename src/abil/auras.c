@@ -8,7 +8,7 @@
 #define DEFAULT_AURA_MAX_RADIUS		512		// maximum radius for aura
 #define DEFAULT_AURA_SCAN_FRAMES	5		// check for targets every few frames
 #define DEFAULT_AURA_DURATION		2		// duration of aura after target is out of range
-#define DEFAULT_AURA_DELAY			0.5		// ability delay
+#define DEFAULT_AURA_DELAY			0		// ability delay
 
 #define MAX_AURAS					3	
 

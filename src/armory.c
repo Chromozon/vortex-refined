@@ -741,13 +741,10 @@ void BuyRuneConfirmMenu_handler (edict_t *ent, int option)
 		{
 		case 1: firstItem = WeaponRunes;	break;
 		case 2: firstItem = &WeaponRunes[10]; break;
-		case 3: firstItem = &WeaponRunes[20]; break;
-		case 4: firstItem = AbilityRunes;	break;
-		case 5: firstItem = &AbilityRunes[10]; break;
-		case 6: firstItem = &AbilityRunes[20]; break;
-		case 7: firstItem = ComboRunes;		break;
-		case 8: firstItem = &ComboRunes[10]; break;
-		case 9: firstItem = &ComboRunes[20]; break;
+		case 3: firstItem = AbilityRunes;	break;
+		case 4: firstItem = &AbilityRunes[10]; break;
+		case 5: firstItem = ComboRunes;		break;
+		case 6: firstItem = &ComboRunes[10]; break;
 		default: 
 			gi.dprintf("Error in BuyRuneConfirmMenu_handler(). Invalid page number: %d\n", page_num);
 			return;
@@ -827,13 +824,10 @@ void OpenBuyRuneConfirmMenu(edict_t *ent, int option)
 	{
 	case 1: firstItem = WeaponRunes;	break;
 	case 2: firstItem = &WeaponRunes[10]; break;
-	case 3: firstItem = &WeaponRunes[20]; break;
-	case 4: firstItem = AbilityRunes;	break;
-	case 5: firstItem = &AbilityRunes[10]; break;
-	case 6: firstItem = &AbilityRunes[20]; break;
-	case 7: firstItem = ComboRunes;		break;
-	case 8: firstItem = &ComboRunes[10]; break;
-	case 9: firstItem = &ComboRunes[20]; break;
+	case 3: firstItem = AbilityRunes;	break;
+	case 4: firstItem = &AbilityRunes[10]; break;
+	case 5: firstItem = ComboRunes;		break;
+	case 6: firstItem = &ComboRunes[10]; break;
 	default: 
 		gi.dprintf("Error in OpenBuyRuneConfirmMenu(). Invalid page number: %d\n", page_num);
 		return;
@@ -883,7 +877,7 @@ void BuyRuneMenu_handler (edict_t *ent, int option)
 		OpenArmoryMenu(ent);
 		return;
 	}
-	else if ((page_num > 0) && (page_num < 9))	//5 was chosen for no real reason
+	else if ((page_num > 0) && (page_num < 7))	//5 was chosen for no real reason
 	{
 		if (page_choice == 2)	//next
             OpenBuyRuneMenu (ent, page_num+1, 0);
@@ -928,26 +922,20 @@ void OpenBuyRuneMenu(edict_t *ent, int page_num, int lastline)
 
 	switch(page_num)
 	{
-        case 1:
-            firstItem = WeaponRunes;	break;
-        case 2:
-            firstItem = &WeaponRunes[10];	break;
-        case 3:
-            firstItem = &WeaponRunes[20];   break;
-        case 4:
-            firstItem = AbilityRunes;	break;
-        case 5:
-            firstItem = &AbilityRunes[10];	break;
-        case 6:
-            firstItem = &AbilityRunes[20];  break;
-        case 7:
-            firstItem = ComboRunes;		break;
-        case 8:
-            firstItem = &ComboRunes[10];		break;
-        case 9:
-            firstItem = &ComboRunes[20];    break;
-        default:
-            gi.dprintf("Error in OpenBuyRuneMenu(). Invalid page number: %d\n", page_num);
+	case 1: 
+		firstItem = WeaponRunes;	break;
+	case 2:		
+		firstItem = &WeaponRunes[10];	break;
+	case 3: 
+		firstItem = AbilityRunes;	break;
+	case 4:
+		firstItem = &AbilityRunes[10];	break;
+	case 5: 
+		firstItem = ComboRunes;		break;
+	case 6:
+		firstItem = &ComboRunes[10];		break;
+	default: 
+		gi.dprintf("Error in OpenBuyRuneMenu(). Invalid page number: %d\n", page_num);
 		return;
 	}
 
@@ -966,17 +954,14 @@ void OpenBuyRuneMenu(edict_t *ent, int page_num, int lastline)
 		{
 			switch(page_num)
 			{
-			case 1:
+			case 1: 
 			case 2:
-			case 3:
 				addlinetomenu(ent, "    <Empty Weapon Slot>", 0); break;
+			case 3: 
 			case 4:
-			case 5:
-			case 6:
 				addlinetomenu(ent, "    <Empty Ability Slot>", 0); break;
-			case 7:
-			case 8:
-			case 9:
+			case 5: 
+			case 6:
 				addlinetomenu(ent, "    <Empty Combo Slot>", 0); break;
 			}
 		}
@@ -984,7 +969,7 @@ void OpenBuyRuneMenu(edict_t *ent, int page_num, int lastline)
 
 	//Footer
 	addlinetomenu(ent, " ", 0);
-	if (page_num < 9) addlinetomenu(ent, "Next", (page_num*10)+2);
+	if (page_num < 6) addlinetomenu(ent, "Next", (page_num*10)+2);
 	addlinetomenu(ent, "Back", (page_num*10)+1);
 	addlinetomenu(ent, "Exit", 99);
 
