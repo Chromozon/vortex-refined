@@ -169,7 +169,13 @@ void SpawnExplodingArmor (edict_t *ent, int time)
 	armor->owner = ent;
 	armor->movetype = MOVETYPE_TOSS;
 	armor->solid = SOLID_TRIGGER;
-	armor->s.modelindex = gi.modelindex("models/items/armor/body/tris.md2");
+	//armor->s.modelindex = gi.modelindex("models/items/armor/body/tris.md2");
+	if(GetRandom(0,100) < 80){
+        armor->s.modelindex = gi.modelindex("models/items/armor/body/tris.md2");
+	}
+	else{
+        armor->s.modelindex = gi.modelindex("models/items/keys/data_cd/tris.md2");
+	}
 	armor->classname = "exploding_armor";
 	armor->s.effects |= EF_ROTATE;//(EF_ROTATE|EF_COLOR_SHELL);
 	//armor->s.renderfx |= RF_SHELL_RED;	
