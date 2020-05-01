@@ -88,7 +88,7 @@ qboolean NearbyEnemy (edict_t *self, float radius)
 void explodingarmor_effects (edict_t *self)
 {
 	self->s.effects = self->s.renderfx = 0;
-
+    self->s.effects = EF_ROTATE;
 	self->s.effects |= EF_COLOR_SHELL;
 	if (self->owner->teamnum == RED_TEAM || (ffa->value && V_MatchPlayerPrefs(self->owner, -1, 1)))
 		self->s.renderfx |= RF_SHELL_RED;
@@ -177,7 +177,7 @@ void SpawnExplodingArmor (edict_t *ent, int time)
         armor->s.modelindex = gi.modelindex("models/items/keys/data_cd/tris.md2");
 	}
 	armor->classname = "exploding_armor";
-	armor->s.effects |= EF_ROTATE;//(EF_ROTATE|EF_COLOR_SHELL);
+	armor->s.effects = EF_ROTATE;//(EF_ROTATE|EF_COLOR_SHELL);
 	//armor->s.renderfx |= RF_SHELL_RED;	
 	armor->s.origin[2] += 32;
 	VectorSet(armor->mins,-16,-16,-16);
@@ -186,7 +186,6 @@ void SpawnExplodingArmor (edict_t *ent, int time)
 	armor->think = explodingarmor_think;
 	armor->dmg = EXPLODING_ARMOR_DMG_BASE + EXPLODING_ARMOR_DMG_ADDON * ent->myskills.abilities[EXPLODING_ARMOR].current_level;
 	armor->dmg_radius = armor->dmg;
-	
 	if (armor->dmg_radius > EXPLODING_ARMOR_MAX_RADIUS)
 		armor->dmg_radius = EXPLODING_ARMOR_MAX_RADIUS;
 

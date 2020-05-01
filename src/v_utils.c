@@ -2279,11 +2279,11 @@ void V_ShellNonAbilityEffects (edict_t *ent)
 						ent->s.effects |= EF_COLOR_SHELL;
 						ent->s.renderfx |= (RF_SHELL_GREEN);
 					}
-					else
+					/*else
 					{
 						if (!hw->value || !V_IsPVP()) // not holywars or pvp gives default shell.
 							ent->s.renderfx |= RF_SHELL_RED;
-					}
+					}*/
 				}
 				else
 					finalEffects = false; // keep processing effects
@@ -2294,6 +2294,7 @@ void V_ShellNonAbilityEffects (edict_t *ent)
 				ent->s.effects |= EF_COLOR_SHELL;
 				ent->s.renderfx |= RF_SHELL_BLUE;
 			}
+			
 		}
 
 		if (finalEffects)

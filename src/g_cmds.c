@@ -3283,7 +3283,7 @@ void ClientCommand (edict_t *ent)
 	}
 	else if (Q_stricmp (cmd, "flash") == 0) // az new skill: flash
 	{
-		if (V_CanUseAbilities(ent, FLASH, 0, true))
+		if (V_CanUseAbilities(ent, FLASH, 25, true))
 		{
 			FindValidSpawnPoint(ent, true); // Find them a random place to go.
 		}
