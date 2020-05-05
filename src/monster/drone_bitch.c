@@ -430,8 +430,8 @@ void myChickMeteor (edict_t *self)
 	//if (slvl > 15)
 	//	slvl = 15;
 
-	damage = 500;//200 + 30 * slvl;
-	speed = 1000;//650 + 35 * slvl;
+	damage = 400;//200 + 30 * slvl;
+	speed = 800;//650 + 35 * slvl;
 
 	fire_meteor(self, self->enemy->s.origin, damage, 200, speed);
 
@@ -473,12 +473,12 @@ void myChickFireball (edict_t *self)
 	if (slvl > 15)
 		slvl = 15;
 
-	damage = 50 + 15 * slvl;
+	damage = 50 + 10 * slvl;
 	flame_damage = 2 * slvl;
-	speed = 650 + 35 * slvl;
+	speed = 650 + 20 * slvl;
 
 	MonsterAim(self, 0.9, speed, true, MZ2_CHICK_ROCKET_1, forward, start);
-	fire_fireball(self, start, forward, damage, 125.0, speed, 5, flame_damage);
+	fire_fireball(self, start, forward, damage, 100.0, speed, 3, flame_damage);
 
 	gi.sound (self, CHAN_ITEM, gi.soundindex("spells/firecast.wav"), 1, ATTN_NORM, 0);
 }

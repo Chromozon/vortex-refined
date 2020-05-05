@@ -654,7 +654,7 @@ edict_t *SpawnDrone (edict_t *ent, int drone_type, qboolean worldspawn)
 	//4.5 monster bonus flags
 	if (drone->monsterinfo.bonus_flags & BF_UNIQUE_FIRE
 		|| drone->monsterinfo.bonus_flags & BF_UNIQUE_LIGHTNING)
-		mult *= 25;
+		mult *= 18;
 	else if (drone->monsterinfo.bonus_flags & BF_CHAMPION)
 		mult *= 3.0;
 	else if (drone->monsterinfo.bonus_flags & BF_BERSERKER)
