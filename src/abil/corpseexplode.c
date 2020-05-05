@@ -89,8 +89,11 @@ void Cmd_CorpseExplode(edict_t *ent)
 	}
 }
 
+
 void Vampire_Think(edict_t *self)
 {
+    // Makes the vampire's screen "red"/gives IR vision at night.
+    /*
 	if (self->myskills.abilities[VAMPIRE].current_level > 5)
 	{
 		if (!level.daytime && self->deadflag != DEAD_DEAD && self->solid != SOLID_NOT)
@@ -108,4 +111,5 @@ void Vampire_Think(edict_t *self)
 			}
 		}
 	}
+     */
 }
