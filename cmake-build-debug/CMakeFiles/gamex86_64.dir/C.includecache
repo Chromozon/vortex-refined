@@ -6,37 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/Spirit.h
+../src/abil/Spirit.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/ability_def.h
+../src/abil/ability_def.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/auras.h
+../src/abil/auras.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/curses.h
+../src/abil/curses/curses.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/hook.h
+../src/abil/hook.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/morph.h
+../src/abil/morph/morph.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/scanner.h
+../src/abil/scanner.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/AStar.h
+../src/ai/AStar.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai.h
+../src/ai/ai.h
 AStar.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/AStar.h
+../src/ai/AStar.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ally.h
+../src/ally.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/armory.c
-g_local.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_local.h
+../src/g_abilities.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_abilities.h
+../src/g_ctf.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_ctf.h
-
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_local.h
+../src/g_local.h
 windows.h
 -
 stdlib.h
@@ -44,51 +40,51 @@ stdlib.h
 crtdbg.h
 -
 q_shared.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/q_shared.h
+../src/q_shared.h
 game.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/game.h
+../src/game.h
 player/menu.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/menu.h
+../src/player/menu.h
 v_shared.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_shared.h
+../src/v_shared.h
 abil/Spirit.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/Spirit.h
+../src/abil/Spirit.h
 abil/morph/morph.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/morph.h
+../src/abil/morph/morph.h
 ally.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ally.h
+../src/ally.h
 sql/gds.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/sql/gds.h
+../src/sql/gds.h
 abil/scanner.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/scanner.h
+../src/abil/scanner.h
 abil/hook.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/hook.h
+../src/abil/hook.h
 ai/ai.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai.h
+../src/ai/ai.h
 g_abilities.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_abilities.h
+../src/g_abilities.h
 menu/menu.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/menu.h
+../src/menu/menu.h
 abil/auras.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/auras.h
+../src/abil/auras.h
 g_ctf.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_ctf.h
+../src/g_ctf.h
 gamemode/ctf.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/gamemode/ctf.h
+../src/gamemode/ctf.h
 v_cmd.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_cmd.h
+../src/v_cmd.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/game.h
+../src/game.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/gamemode/ctf.h
+../src/gamemode/ctf.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/Talents.h
+../src/menu/Talents.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/menu.h
+../src/menu/menu.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/menu.h
+../src/player/menu.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/q_shared.h
+../src/q_shared.h
 assert.h
 -
 math.h
@@ -106,41 +102,45 @@ time.h
 ctype.h
 -
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/settings.h
+../src/settings.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/sql/gds.h
+../src/sql/gds.h
 sys/stat.h
 -
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_cmd.h
+../src/v_cmd.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_items.h
+../src/v_items.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_maplist.h
+../src/v_maplist.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_shared.h
+../src/v_shared.h
 q_shared.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/q_shared.h
+../src/q_shared.h
 weapon_def.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/weapon_def.h
+../src/weapon_def.h
 abil/ability_def.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/ability_def.h
+../src/abil/ability_def.h
 settings.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/settings.h
+../src/settings.h
 v_utils.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_utils.h
+../src/v_utils.h
 v_items.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_items.h
+../src/v_items.h
 v_maplist.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_maplist.h
+../src/v_maplist.h
 abil/curses/curses.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/curses.h
+../src/abil/curses/curses.h
 abil/auras.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/auras.h
+../src/abil/auras.h
 menu/Talents.h
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/Talents.h
+../src/menu/Talents.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_utils.h
+../src/v_utils.h
 
-/home/xcessive/Desktop/Indy3/vortex-indy-master/src/weapon_def.h
+../src/weapon_def.h
+
+/home/xcessive/Documents/vortex-indy-master/src/gamemode/ctf.c
+g_local.h
+/home/xcessive/Documents/vortex-indy-master/src/gamemode/g_local.h
 

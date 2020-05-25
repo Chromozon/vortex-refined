@@ -325,7 +325,7 @@ void DeathmatchScoreboardMessage (edict_t *ent, edict_t *killer)
 			cl_ent->client->resp.spectator? 0 : cl_ent->myskills.level, 
 			cl_ent->client->resp.spectator? "??" : classname, cl_ent->client->resp.spectator? 0 : cl->resp.score, 
 			cl_ent->client->resp.spectator? 0 : cl->resp.frags, 
-			cl_ent->client->resp.spectator? 0 : cl_ent->myskills.streak, cl->ping); 
+			cl_ent->client->resp.spectator? 0 : cl_ent->myskills.streak, cl->ping);
 
 		j = strlen(entry);
 

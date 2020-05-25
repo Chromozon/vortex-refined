@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug"/>
+				<Option working_dir="/home/xcessive/Documents/vortex-indy-master/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug"/>
+				<Option working_dir="/home/xcessive/Documents/vortex-indy-master/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug"/>
+				<Option working_dir="/home/xcessive/Documents/vortex-indy-master/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gamex86_64">
-				<Option output="/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/libgamex86_64.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug"/>
+				<Option output="/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/libgamex86_64.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xcessive/Documents/vortex-indy-master/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
 				<Option compiler="gcc"/>
@@ -50,26 +50,27 @@
 					<Add option="-DCMD_USEHASH"/>
 					<Add option="-DALLOW_ADMIN"/>
 					<Add option="-DQ2PRO_COMPATIBILITY"/>
-					<Add directory="/home/xcessive/Desktop/Indy3/vortex-indy-master/./src"/>
-					<Add directory="/home/xcessive/Desktop/Indy3/vortex-indy-master/./src/*"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/home/xcessive/Documents/vortex-indy-master/./src"/>
+					<Add directory="/home/xcessive/Documents/vortex-indy-master/./src/*"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 gamex86_64"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 gamex86_64"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gamex86_64/fast">
-				<Option output="/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/libgamex86_64.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug"/>
+				<Option output="/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/libgamex86_64.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xcessive/Documents/vortex-indy-master/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
 				<Option compiler="gcc"/>
@@ -80,613 +81,617 @@
 					<Add option="-DCMD_USEHASH"/>
 					<Add option="-DALLOW_ADMIN"/>
 					<Add option="-DQ2PRO_COMPATIBILITY"/>
-					<Add directory="/home/xcessive/Desktop/Indy3/vortex-indy-master/./src"/>
-					<Add directory="/home/xcessive/Desktop/Indy3/vortex-indy-master/./src/*"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/home/xcessive/Documents/vortex-indy-master/./src"/>
+					<Add directory="/home/xcessive/Documents/vortex-indy-master/./src/*"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 gamex86_64/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Desktop/Indy3/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 gamex86_64/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/Spirit.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/Spirit.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/Spirit.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/Spirit.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/ammosteal.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/ammosteal.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/antigrav.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/antigrav.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/auras.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/auras.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/auras.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/auras.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/autocannon.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/autocannon.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/blessedhammer.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/blessedhammer.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/bombspell.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/bombspell.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/boost.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/boost.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/caltrops.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/caltrops.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/chainlightning.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/chainlightning.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/cloak.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/cloak.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/conversion.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/conversion.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/corpseeater.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/corpseeater.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/corpseexplode.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/corpseexplode.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/cripple.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/cripple.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/amnesia.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/curses/amnesia.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/ampdamage.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/curses/ampdamage.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/blessing.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/curses/blessing.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/common.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/curses/common.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/curse.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/curses/curse.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/deflect.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/curses/deflect.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/healing.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/curses/healing.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/lifedrain.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/curses/lifedrain.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/lowerresist.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/curses/lowerresist.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/curses/weaken.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/curses/weaken.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/detector.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/detector.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/explodingarmor.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/explodingarmor.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/fireball.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/fireball.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/flying_skull.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/flying_skull.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/forcewall.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/forcewall.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/holyground.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/holyground.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/hook.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/hook.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/hook.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/hook.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/jetpack.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/jetpack.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/laser/common.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/laser/common.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/laser/laser.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/laser/laser.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/laser/platform.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/laser/platform.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/lightningstorm.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/lightningstorm.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/magicbolt.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/magicbolt.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/magmine.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/magmine.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/meditate.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/meditate.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/meteor.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/meteor.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/mindabsorb.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/mindabsorb.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/minisentry.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/minisentry.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/mirror.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/mirror.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/mjump.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/mjump.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/autoaim.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/morph/autoaim.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/brain.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/morph/brain.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/cacodemon.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/morph/cacodemon.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/playertoberserk.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/morph/playertoberserk.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/playertoflyer.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/morph/playertoflyer.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/playertoflyer.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/morph/playertoflyer.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/playertomedic.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/morph/playertomedic.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/playertomutant.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/morph/playertomutant.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/playertoparasite.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/morph/playertoparasite.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/morph/playertotank.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/morph/playertotank.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/napalm.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/napalm.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/nova.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/nova.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/organic/cocoon.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/organic/cocoon.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/organic/common.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/organic/common.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/organic/gasser.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/organic/gasser.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/organic/healer.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/organic/healer.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/organic/obstacle.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/organic/obstacle.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/organic/spiker.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/organic/spiker.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/plague.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/plague.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/plasmabolt.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/plasmabolt.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/proxy.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/proxy.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/purge.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/purge.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/scanner.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/scanner.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/scanner.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/scanner.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/selfdestruct.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/selfdestruct.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/sentrygun.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/sentrygun.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/spike.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/spike.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/spike.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/spike.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/spikegrenade.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/spikegrenade.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/supplystation.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/supplystation.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/teleport.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/teleport.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/totems.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/totems.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/abil/wormhole.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/abil/wormhole.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/AStar.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/AStar.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/AStar.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/AStar.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_class_dmbot.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_class_dmbot.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_class_monster_default.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_class_monster_default.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_dropnodes.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_dropnodes.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_items.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_items.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_links.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_links.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_main.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_main.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_movement.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_movement.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_navigation.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_navigation.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_nodes.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_nodes.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_tools.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_tools.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_weapons.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_weapons.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/ai_weapons.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/ai_weapons.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/bot_common.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/bot_common.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ai/bot_spawn.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ai/bot_spawn.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ally.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ally.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/ally.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/ally.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/armory.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/armory.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/backpack.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/backpack.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/damage.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/damage.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/damage.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/damage.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_chase.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_chase.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_cmds.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_cmds.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_combat.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_combat.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_flame.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_flame.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_func.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_func.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_items.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_items.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_lasers.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_lasers.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_main.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_main.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_misc.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_misc.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_monster.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_monster.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_phys.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_phys.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_save.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_save.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_spawn.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_spawn.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_svcmds.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_svcmds.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_sword.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_sword.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_target.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_target.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_trigger.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_trigger.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_utils.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_utils.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/g_weapon.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/g_weapon.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/gamemode/ctf.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/gamemode/ctf.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/gamemode/ctf.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/gamemode/ctf.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/gamemode/domination.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/gamemode/domination.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/gamemode/holywars.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/gamemode/holywars.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/gamemode/invasion.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/gamemode/invasion.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/gamemode/invasion.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/gamemode/invasion.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/gamemode/pvb.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/gamemode/pvb.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/gamemode/tbi.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/gamemode/tbi.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/grid.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/grid.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/lasersight.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/lasersight.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/maplist.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/maplist.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/Talents.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/maplist.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/Talents.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/menu/Talents.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/help.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/menu/Talents.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/item.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/menu/help.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/menu.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/menu/item.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/menu.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/menu/menu.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/trade.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/menu/menu.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/upgrades.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/menu/trade.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/menu/weapon.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/menu/upgrades.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/misc/ents.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/menu/weapon.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/misc/file_output.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/misc/ents.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/misc/hash_32a.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/misc/file_output.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/misc_stuff.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/misc/hash_32a.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/boss_general.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/misc_stuff.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/boss_makron.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/boss_general.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/boss_tank.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/boss_makron.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_ai.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/boss_tank.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_berserk.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_ai.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_bitch.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_berserk.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_brain.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_bitch.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_decoy.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_brain.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_gladiator.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_decoy.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_gunner.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_gladiator.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_infantry.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_gunner.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_jorg.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_infantry.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_makron.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_jorg.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_medic.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_makron.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_misc.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_medic.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_move.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_misc.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_mutant.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_move.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_parasite.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_mutant.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_soldier.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_parasite.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_supertank.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_soldier.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/drone_tank.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_supertank.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/monster/m_flash.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/drone_tank.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/Player.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/monster/m_flash.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/client.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/player/Player.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/hud.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/player/client.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/menu.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/player/hud.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/menu.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/player/menu.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/parasite.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/player/menu.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/player_points.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/player/parasite.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/trail.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/player/player_points.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/view.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/player/trail.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/player/weapon.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/player/view.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/q_shared.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/player/weapon.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/q_shared.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/q_shared.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/sql/sqlite3.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/q_shared.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/sql/sqlite3.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/sql/sqlite3.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/teamplay.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/sql/sqlite3.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/teamplay.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/teamplay.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_cmd.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/teamplay.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_cmd.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/v_cmd.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_file_IO.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/v_cmd.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_items.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/v_file_IO.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_items.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/v_items.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_maplist.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/v_items.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_maplist.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/v_maplist.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_mysql_gds.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/v_maplist.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_utils.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/v_mysql_gds.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/v_utils.h">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/v_utils.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/vote.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/v_utils.h">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/src/weapons.c">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/vote.c">
 			<Option target="gamex86_64"/>
 		</Unit>
-		<Unit filename="/home/xcessive/Desktop/Indy3/vortex-indy-master/CMakeLists.txt">
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/src/weapons.c">
+			<Option target="gamex86_64"/>
+		</Unit>
+		<Unit filename="/home/xcessive/Documents/vortex-indy-master/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

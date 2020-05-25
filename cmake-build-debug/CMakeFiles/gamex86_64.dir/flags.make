@@ -6,5 +6,5 @@ C_FLAGS = -O3 -DNDEBUG -fPIC
 
 C_DEFINES = -DALLOW_ADMIN -DCMD_USEHASH -DGDS_NOMULTITHREADING -DNO_GDS -DQ2PRO_COMPATIBILITY -DREMOVE_RESPAWNS -Dgamex86_64_EXPORTS
 
-C_INCLUDES = -I/home/xcessive/Desktop/Indy3/vortex-indy-master/./src -I"/home/xcessive/Desktop/Indy3/vortex-indy-master/./src/*" 
+C_INCLUDES = -I/home/xcessive/Documents/vortex-indy-master/./src -I"/home/xcessive/Documents/vortex-indy-master/./src/*" 
 

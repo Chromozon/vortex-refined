@@ -307,15 +307,9 @@ void VortexSpreeAbilities (edict_t *attacker)
 		else if (attacker->client->invincible_framenum > level.framenum)
 			attacker->client->invincible_framenum += kill_duration;
 		else if (!(attacker->myskills.streak % 10))
-		{
-			// give them quad OR invin, not both!
-			if (random() > 0.5)	
-				attacker->client->quad_framenum = level.framenum + base_duration;
-			else
-				// (apple)
-				// invincible_framenum would add up level.framenum + base_duration
-				attacker->client->invincible_framenum = level.framenum + base_duration;
-		}
+			attacker->client->quad_framenum = level.framenum + base_duration;
+        else if (!(attacker->myskills.streak % 12))
+            attacker->client->invincible_framenum = level.framenum + base_duration;
 	}
 	// does the attacker have create quad?
 	else if (attacker->myskills.abilities[CREATE_QUAD].current_level > 0)
