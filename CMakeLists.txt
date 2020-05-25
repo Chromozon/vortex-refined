@@ -95,7 +95,7 @@ endif ()
 
 # If we're on windows. move it one step up.
 if (WIN32)
-  add_custom_command (TARGET ${CC_LIB_NAME} POST_BUILD COMMAND mv ${CC_LIB_NAME}.dll ../${CC_LIB_NAME}.dll)
+  add_custom_command (TARGET ${CC_LIB_NAME} POST_BUILD COMMAND move ${CC_LIB_NAME}.dll ../${CC_LIB_NAME}.dll)
 endif ()
 
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -g")

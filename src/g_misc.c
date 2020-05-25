@@ -891,21 +891,21 @@ void FindMonsterSpot (edict_t *self)
 		self->delay = level.time + self->random;
 	}
 
-	// there is a 10-20% chance that a boss will spawn
-	// if the server is more than one quarter full
-	/*
-	if (!BossExists() && (self->num_sentries < 1) && (players > 0.25*maxclients->value))
+	// there is a 20% chance that a boss will spawn in FFA
+	// if the server is one quarter or more full
+	
+	if (ffa->value && !BossExists() && (self->num_sentries < 1) && (players >= 0.25*maxclients->value))
 	{
-		int chance = 10;
-		//CreateRandomPlayerBoss(true);
+		int chance = 20;
+		CreateRandomPlayerBoss(true);
 		
-		if (ffa->value)
-			chance *= 2;
+		// if (ffa->value)
+		// 	chance *= 2;
 		
 		if (GetRandom(1, 200) <= chance)
 			SpawnDrone(self, 30, true);
 	}
-	*/
+	
 
 	self->nextthink = level.time + FRAMETIME;
 }

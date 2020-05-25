@@ -679,11 +679,12 @@ void ShowVoteMapMenu_handler(edict_t *ent, int option)
 			ExitLevel();
 			return;
 		}
-		else if (!strcmp(maplist->maps[mapnum-1].name, level.mapname))
+		// Remove restriction to vote the same map
+		/* else if (!strcmp(maplist->maps[mapnum-1].name, level.mapname))
 		{
 			safe_cprintf(ent, PRINT_HIGH, "Can't vote for current map!\n");
 			return;
-		}
+		} */
 		else
 		{
 			//Add the player's vote
@@ -989,15 +990,9 @@ void ShowVoteModeMenu(edict_t *ent)
 	{
 		addlinetomenu(ent, " Invasion (Hard mode)", MAPMODE_INH);
 		lastline++;
-	}
-	
-	// domination available when there are at least 4 players
-	if (players >= 8)
-	{
-		addlinetomenu(ent, " Domination", MAPMODE_DOM);
-		lastline++;
-	}
-	// CTF and vhw and tbi available when there are at least 4 players
+	}	
+
+	// CTF and vhw and tbi and DOM available when there are at least 4 players
 	if (players >= 4)
 	{
 		addlinetomenu(ent, " CTF", MAPMODE_CTF);
@@ -1007,6 +1002,9 @@ void ShowVoteModeMenu(edict_t *ent)
 		lastline++;
 
 		addlinetomenu(ent, " Destroy The Spawn", MAPMODE_TBI);
+		lastline++;
+
+		addlinetomenu(ent, " Domination", MAPMODE_DOM);
 		lastline++;
 	}
 

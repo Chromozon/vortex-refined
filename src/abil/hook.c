@@ -226,8 +226,8 @@ void fire_hook (edict_t *owner, vec3_t start, vec3_t forward)
 		trace_t tr;
 
         hook = G_Spawn();
-
-		hook->monsterinfo.level = max(owner->myskills.abilities[GRAPPLE_HOOK].current_level, 1);
+		
+		hook->monsterinfo.level = min(owner->myskills.abilities[GRAPPLE_HOOK].current_level, 3);
 
 		//4.2 allow free hook in CTF mode
 		if (ctf->value && (hook->monsterinfo.level < 2))
