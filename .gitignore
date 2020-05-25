@@ -1,1 +1,5 @@
 *.sdf
+.vs/*
+out/*
+src/.vs/*
+src/gamex86.vcxproj*
