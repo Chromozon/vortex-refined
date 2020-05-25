@@ -679,11 +679,12 @@ void ShowVoteMapMenu_handler(edict_t *ent, int option)
 			ExitLevel();
 			return;
 		}
-		else if (!strcmp(maplist->maps[mapnum-1].name, level.mapname))
+		// Remove restriction to vote the same map
+		/* else if (!strcmp(maplist->maps[mapnum-1].name, level.mapname))
 		{
 			safe_cprintf(ent, PRINT_HIGH, "Can't vote for current map!\n");
 			return;
-		}
+		} */
 		else
 		{
 			//Add the player's vote
