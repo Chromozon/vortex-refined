@@ -1,103 +1,48 @@
- # Cmake script based off several sources, including cleancodequake2.
+cmake_minimum_required(VERSION 3.21)
 
-# Specify minimum version of CMake required
-cmake_minimum_required (VERSION 2.8)
+if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
+    message(FATAL_ERROR "In-source builds not allowed. Run CMake from the build directory. You may need to remove CMakeCache.txt.")
+endif()
 
-# Project name
-project (VortexQuake2)
+# Project
+project(vortex_refined LANGUAGES C CXX)
 
-include(CMakeDependentOption)
-option(VRX_USE_MYSQL "Use MySQL based GDS" FALSE)
-option(VRX_USE_MULTITHREAD "Use multithreading (only valid when using mysql)" FALSE)
-option(VRX_ALLOW_ADMIN "Allow usage of admin commands via rcon/sv commands." TRUE)
-option(VRX_LOCKDEFAULTS "Disallow changing exp/credits rates via cvar." FALSE)
-option(VRX_REMOVERESPAWNS "Remove the usage of respawns." FALSE)
-option(VRX_USEHASH "Use hashing on commands instead of iterating through the list." TRUE)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 17)
+
+# Force only 32-bit compile
+if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+    message(FATAL_ERROR "This project only supports 32-bit compile. Select a 32-bit compiler toolchain.")
+endif()
+if(UNIX)
+    set(CMAKE_C_FLAGS "-m32")
+    set(CMAKE_CXX_FLAGS "-m32")
+endif()
+
+if(WIN32)
+    set(LIB_NAME "gamex86")
+elseif(UNIX)
+    set(LIB_NAME "gamei386")
+endif()
+
+# Stop CMake from preprending "lib" to the library name
+set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 # Source files
-file (GLOB VRX_FILES ./src/*.c)
-file (GLOB VRX_SUBDIR_FILES ./src/*/*.c)
-file (GLOB VRX_SUBSUBDIR_FILES ./src/*/*/*.c)
+file(GLOB_RECURSE VRX_FILES "./src/*.c")
+file(GLOB_RECURSE VRX_FILES_CPP "./src/*.cpp")
 
-# Set the platform-specific library name and use platform-specific files.
-if (WIN32)
-  set (CC_LIB_NAME gamex86)
-  #file (GLOB CC_PLATFORM_FILES source/Platform/windows/*)
-elseif (UNIX)
-  # Get machine hardware name (arch), force 386 (if applicable), strip newlines, and store in ARCH
-  execute_process (COMMAND uname -m COMMAND sed s/i.86/i386/ COMMAND tr -d \n OUTPUT_VARIABLE ARCH)
-  set (CC_LIB_NAME game${ARCH})
-  #file (GLOB CC_PLATFORM_FILES source/Platform/unix/*)
-else ()
-  message (FATAL "Unknown platform")
-endif ()
+include_directories("./src/" "./src/*/" "./src/*/*/")
 
-# Specify include directories
+add_library(${LIB_NAME} SHARED)
 
-include_directories( ./src/ ./src/*/ )
+target_sources(${LIB_NAME} PRIVATE
+    ${VRX_FILES}
+    ${VRX_FILES_CPP}
+)
 
-# Specify the source files for the game library
-add_library (${CC_LIB_NAME} SHARED ${VRX_FILES} ${VRX_SUBDIR_FILES} ${VRX_SUBSUBDIR_FILES})
+# Third-party sources
+target_sources(${LIB_NAME} PRIVATE "./thirdparty/sqlite-amalgamation-3370200/sqlite3.c")
+include_directories(AFTER "./thirdparty/sqlite-amalgamation-3370200/")
 
-if (VRX_USE_MYSQL AND WIN32)
-    set (CC_LINK_LIBS ${CC_LINK_LIBS} libmysql)
-endif()
-
-if (VRX_USE_MYSQL AND UNIX)
-    set (CC_LINK_LIBS ${CC_LINK_LIBS} mysqlclient)
-endif ()
-
-if (WIN32)
-  set (CC_LINK_LIBS ${CC_LINK_LIBS} Wininet Winmm)
-endif ()
-
-if (UNIX AND VRX_USE_MULTITHREAD)
-  find_package (Threads)
-  set (CC_LINK_LIBS ${CC_LINK_LIBS} ${CMAKE_THREAD_LIBS_INIT})
-endif ()
-
-if (WIN32 AND VRX_USE_MULTITHREAD)
-  set (CC_LINK_LIBS ${CC_LINK_LIBS} pthreadVC2)
-endif ()
-
-if (NOT VRX_REMOVERESPAWNS)
-  add_definitions(-DREMOVE_RESPAWNS)
-endif ()
-
-if (NOT VRX_USE_MULTITHREAD)
-  add_definitions(-DGDS_NOMULTITHREADING)
-endif ()
-
-if (NOT VRX_USE_MYSQL)
-  add_definitions(-DNO_GDS)
-endif()
-
-if (VRX_USEHASH)
-  add_definitions(-DCMD_USEHASH)
-endif()
-
-if (VRX_ALLOW_ADMIN)
-  add_definitions(-DALLOW_ADMIN)
-endif()
-
-if (VRX_LOCKDEFAULTS)
-  add_definitions(-DLOCK_DEFAULTS)
-endif()
-
-add_definitions(-DQ2PRO_COMPATIBILITY)
-
-target_link_libraries (${CC_LIB_NAME} ${CC_LINK_LIBS})
-
-# If host is Unix-like, remove "lib" prefix from the library's file name
-if (UNIX)
-  add_custom_command (TARGET ${CC_LIB_NAME} POST_BUILD COMMAND mv lib${CC_LIB_NAME}.so ${CC_LIB_NAME}.so)
-endif ()
-
-# If we're on windows. move it one step up.
-if (WIN32)
-  add_custom_command (TARGET ${CC_LIB_NAME} POST_BUILD COMMAND move ${CC_LIB_NAME}.dll ../${CC_LIB_NAME}.dll)
-endif ()
-
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -g")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
-set(CMAKE_BUILD_TYPE "Release")
+target_compile_definitions(${LIB_NAME} PRIVATE GDS_NOMULTITHREADING=1)
