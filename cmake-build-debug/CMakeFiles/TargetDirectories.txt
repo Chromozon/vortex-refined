@@ -1,3 +1,0 @@
-/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/xcessive/Documents/vortex-indy-master/cmake-build-debug/CMakeFiles/gamex86_64.dir
