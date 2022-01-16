@@ -10,6 +10,12 @@ project(vortex_refined LANGUAGES C CXX)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 17)
 
+if(WIN32)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /fp:fast")
+elseif(UNIX)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ffast-math")
+endif()
+
 # Force only 32-bit compile
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
     message(FATAL_ERROR "This project only supports 32-bit compile. Select a 32-bit compiler toolchain.")
