@@ -34,11 +34,16 @@ file(GLOB_RECURSE VRX_FILES_CPP "./src/*.cpp")
 
 include_directories("./src/" "./src/*/" "./src/*/*/")
 
+if(WIN32)
+    set(DEF_FILE "./src/game.def")
+endif()
+
 add_library(${LIB_NAME} SHARED)
 
 target_sources(${LIB_NAME} PRIVATE
     ${VRX_FILES}
     ${VRX_FILES_CPP}
+    ${DEF_FILE}
 )
 
 # Third-party sources
